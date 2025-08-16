@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Mensaje de Contacto - Terraza los Peques</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e74c3c;
+        }
+        
+        .header h1 {
+            color: #e74c3c;
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .header p {
+            color: #666;
+            margin: 5px 0 0 0;
+            font-size: 16px;
+        }
+        
+        .content {
+            margin-bottom: 30px;
+        }
+        
+        .field {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .field-label {
+            font-weight: bold;
+            color: #9b59b6;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        
+        .field-value {
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+        }
+        
+        .message-field {
+            border-left-color: #3498db;
+        }
+        
+        .message-field .field-label {
+            color: #3498db;
+        }
+        
+        .date-field {
+            border-left-color: #f39c12;
+        }
+        
+        .date-field .field-label {
+            color: #f39c12;
+        }
+        
+        .contact-field {
+            border-left-color: #2ecc71;
+        }
+        
+        .contact-field .field-label {
+            color: #2ecc71;
+        }
+        
+        .footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .logo {
+            background: linear-gradient(135deg, #e74c3c, #9b59b6);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0 auto 10px auto;
+            line-height: 1;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">TP</div>
+            <h1>Nuevo Mensaje de Contacto</h1>
+            <p>Terraza los Peques</p>
+        </div>
+        
+        <div class="content">
+            <p>¡Hola!</p>
+            <p>Has recibido un nuevo mensaje de contacto desde el sitio web:</p>
+            
+            <div class="field">
+                <div class="field-label">Nombre Completo</div>
+                <div class="field-value">{{from_name}}</div>
+            </div>
+            
+            <div class="field contact-field">
+                <div class="field-label">Correo Electrónico</div>
+                <div class="field-value">{{from_email}}</div>
+            </div>
+            
+            <div class="field contact-field">
+                <div class="field-label">Teléfono</div>
+                <div class="field-value">{{phone}}</div>
+            </div>
+            
+            <div class="field date-field">
+                <div class="field-label">Fecha del Evento</div>
+                <div class="field-value">{{event_date}}</div>
+            </div>
+            
+            <div class="field message-field">
+                <div class="field-label">Mensaje</div>
+                <div class="field-value">{{message}}</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Para responder:</strong> {{reply_to}}</p>
+            <p>---</p>
+            <p>Este mensaje fue enviado desde el formulario de contacto del sitio web de <strong>Terraza los Peques</strong></p>
+            <p style="margin-top: 20px; font-size: 12px; color: #999;">
+                🎉 ¡Hagamos que este evento sea inolvidable! 🎉
+            </p>
+        </div>
+    </div>
+</body>
+</html>

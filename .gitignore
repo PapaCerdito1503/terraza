@@ -1,0 +1,3 @@
+node_modules/*
+MainWorks/node_modules/*
+*.gz*
